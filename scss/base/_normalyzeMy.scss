@@ -33,10 +33,9 @@ li {
 }
 
 body {
-  font-family: roboto, sans-serif;
-  background-color: $bgc-main;
-  color: $main-text-color;
-  letter-spacing: 0.03em;
+  font-family: 'DM Sans', sans-serif;
+  background-color: $bgc-white-color;
+  color: $text-black-color;
 }
 
 img {
@@ -49,3 +48,5 @@ button {
   padding: 0;
   border-width: 0;
 }
+
+// font-family: 'Titan One', cursive;
