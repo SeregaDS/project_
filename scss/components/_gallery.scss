@@ -1,13 +1,16 @@
 .gallery {
   display: grid;
+  grid-auto-flow: column;
   gap: 20px;
-  grid-template-columns: repeat(5, minmax(140px, auto));
-  grid-template-rows: auto;
+  grid-template-rows: repeat(2, minmax(140px, auto));
+  grid-template-columns: repeat(6, auto);
+  align-items: center;
 }
 
-.container {
+.wrap {
   display: flex;
   justify-content: center;
+  height: 100%;
 }
 
 .image-container {
@@ -19,7 +22,74 @@
   transition: transform 250ms linear, padding-right 250ms linear, height 250ms linear;
   &:hover {
     transform: scale(2);
-
     padding-right: 140px;
+  }
+
+  &:nth-child(1) {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    position: relative;
+    bottom: 4%;
+  }
+  &:nth-child(10) {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    position: relative;
+    top: 4%;
+  }
+
+  &:nth-child(2) {
+    position: relative;
+    top: 10%;
+  }
+
+  &:nth-child(3) {
+    position: relative;
+    top: 10%;
+    transform-origin: left top;
+    &:hover {
+      transform: scale(2);
+      padding-bottom: 0;
+    }
+  }
+
+  &:nth-child(4) {
+    position: relative;
+    bottom: 10%;
+  }
+  &:nth-child(5) {
+    position: relative;
+    bottom: 10%;
+    transform-origin: left top;
+    &:hover {
+      transform: scale(2);
+      padding-bottom: 0;
+    }
+  }
+  &:nth-child(6) {
+    position: relative;
+    top: 10%;
+  }
+  &:nth-child(7) {
+    position: relative;
+    top: 10%;
+    transform-origin: left top;
+    &:hover {
+      transform: scale(2);
+      padding-bottom: 0;
+    }
+  }
+  &:nth-child(8) {
+    position: relative;
+    bottom: 10%;
+  }
+  &:nth-child(9) {
+    position: relative;
+    bottom: 10%;
+    transform-origin: left top;
+    &:hover {
+      transform: scale(2);
+      padding-bottom: 0;
+    }
   }
 }
