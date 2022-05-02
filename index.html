@@ -120,7 +120,7 @@
       </div>
     </section>
 
-    <section class="testimonials">
+    <section class="testimonials1">
       <div class="container">
         <ul class="testimonials__list">
           <li class="testimonials__item">
@@ -143,5 +143,86 @@
         </ul>
       </div>
     </section>
+    <section class="testimonials">
+      <div class="container">
+        <div class="itcss">
+          <div class="itcss__wrapper">
+            <ul class="itcss__items">
+              <li class="itcss__item">
+                <div class="testimonials__image-container">
+                  <img src="./images/testimonials1.png" alt="" />
+                </div>
+                <div class="testimonials__wrap">
+                  <p class="testimonials__text">
+                    Nullam viverra consectetuer. Quisque cursus et, porttitor risus. Aliquam sem. In
+                    hendrerit nulla quam nunc, accumsan congue. Lorem ipsum primis in nibh vel
+                    risus.
+                  </p>
+                  <svg class="testimonials__icon" width="54" height="40">
+                    <use href="./images/icons.svg#icon-testimonials"></use>
+                  </svg>
+                </div>
+                <p class="testimonials__owner">Emily, Los Angeles</p>
+              </li>
+              <li class="itcss__item">
+                <div class="testimonials__image-container">
+                  <img src="./images/testimonials1.png" alt="" />
+                </div>
+                <div class="testimonials__wrap">
+                  <p class="testimonials__text">
+                    Nullam viverra consectetuer. Quisque cursus et, porttitor risus. Aliquam sem. In
+                    hendrerit nulla quam nunc, accumsan congue. Lorem ipsum primis in nibh vel
+                    risus.
+                  </p>
+                  <svg class="testimonials__icon" width="54" height="40">
+                    <use href="./images/icons.svg#icon-testimonials"></use>
+                  </svg>
+                </div>
+                <p class="testimonials__owner">Emily, Los Angeles</p>
+              </li>
+              <li class="itcss__item">
+                <div class="testimonials__image-container">
+                  <img src="./images/testimonials1.png" alt="" />
+                </div>
+                <div class="testimonials__wrap">
+                  <p class="testimonials__text">
+                    Nullam viverra consectetuer. Quisque cursus et, porttitor risus. Aliquam sem. In
+                    hendrerit nulla quam nunc, accumsan congue. Lorem ipsum primis in nibh vel
+                    risus.
+                  </p>
+                  <svg class="testimonials__icon" width="54" height="40">
+                    <use href="./images/icons.svg#icon-testimonials"></use>
+                  </svg>
+                </div>
+                <p class="testimonials__owner">Emily, Los Angeles</p>
+              </li>
+            </ul>
+          </div>
+          <a
+            class="itcss__control itcss__control_prev"
+            href="#"
+            role="button"
+            data-slide="prev"
+          ></a>
+          <a
+            class="itcss__control itcss__control_next"
+            href="#"
+            role="button"
+            data-slide="next"
+          ></a>
+        </div>
+      </div>
+    </section>
   </body>
+  <script src="js/slider.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // инициализация слайдера
+      var slider = new ItcSimpleSlider('.itcss', {
+        loop: true,
+        autoplay: false,
+        swipe: true,
+      });
+    });
+  </script>
 </html>

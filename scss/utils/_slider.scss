@@ -8,7 +8,7 @@
 .itcss {
   position: relative;
   overflow: hidden;
-  max-width: 600px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -17,7 +17,7 @@
 .itcss__wrapper {
   position: relative;
   overflow: hidden;
-  background-color: #eee;
+  //   background-color: #eee;
 }
 
 /* стили для элемента, в котором непосредственно расположены элементы (слайды) */
@@ -36,6 +36,8 @@
   flex: 0 0 100%;
   max-width: 100%;
   position: relative;
+  display: grid;
+  justify-items: center;
 }
 
 /* кнопки Prev и Next */
@@ -92,16 +94,17 @@
 
 /* Индикаторы */
 .itcss__indicators {
-  position: absolute;
+  //   position: absolute;
   left: 0;
   right: 0;
-  bottom: 10px;
+  bottom: -20px;
   display: flex;
   justify-content: center;
   padding-left: 0;
   margin: 0 15%;
   list-style: none;
   user-select: none;
+  outline: 1px solid red;
 }
 
 .itcss__indicator {
@@ -110,7 +113,7 @@
   height: 4px;
   margin-right: 3px;
   margin-left: 3px;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: red;
   background-clip: padding-box;
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;
@@ -119,4 +122,25 @@
 
 .itcss__indicator_active {
   background-color: #fff;
+}
+
+// !dop stili
+
+.itcss__items {
+  counter-reset: slide;
+}
+
+.itcss__item {
+  counter-increment: slide;
+}
+
+.itcss__item > div::before {
+  content: counter(slide);
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: #fff;
+  font-style: italic;
+  font-size: 32px;
+  font-weight: bold;
 }
