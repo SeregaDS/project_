@@ -1,6 +1,9 @@
 .testimonials {
   padding-top: 40px;
-  padding-bottom: 40px;
+}
+
+.testimonials__title {
+  @extend %visually-hidden;
 }
 
 // .testimonials__list {

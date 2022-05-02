@@ -14,12 +14,27 @@
     <title>Document</title>
   </head>
   <body>
-    <header>
+    <header class="header">
       <div class="container">
-        <div>Logo</div>
-        <div>Menu burger</div>
-        <h1 class="hero-title">ice cream made with passion</h1>
-        <div class="hero-buttons"><a href="">Products</a><a href="">How it's made?</a></div>
+        <div class="header__container">
+          <div class="header__logo"><img src="./images/logo1x.png" alt="" /></div>
+          <button class="mobile-menu__button" type="button" aria-expanded="false">
+            <svg aria-label="Переключатель меню" width="40" height="40">
+              <use class="mobile-menu__close" href="./images/icons.svg#icon-close"></use>
+              <use class="mobile-menu__burger" href="./images/icons.svg#icon-burger"></use>
+            </svg>
+          </button>
+
+          <h1 class="header__title">
+            ice cream <br />
+            made with <br /><span class="header__title--color-fz">passion</span>
+          </h1>
+          <div class="header__buttons">
+            <a class="header__btn" href="">Products</a
+            ><a class="header__btn header__btn--secondary" href="">How it's made?</a>
+          </div>
+          <div class="header__image"><img src="./images/icecream.png" alt="icecream" /></div>
+        </div>
       </div>
     </header>
     <section class="products">
@@ -55,7 +70,7 @@
       <div class="container">
         <p>tradition and love</p>
         <h2>how it’s made?</h2>
-        <img src="" alt="" />
+        <!-- <img src="" alt="" /> -->
         <p>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta, iusto quaerat. Assumenda
           quas saepe modi esse nam veniam qui consequatur quisquam illo aliquam, doloribus dolorem
@@ -82,6 +97,7 @@
       </div>
     </section>
     <section class="gallery">
+      <h2 class="gallery__title">Gallery</h2>
       <div class="container">
         <div class="wrap">
           <div class="images">
@@ -120,30 +136,8 @@
       </div>
     </section>
 
-    <section class="testimonials1">
-      <div class="container">
-        <ul class="testimonials__list">
-          <li class="testimonials__item">
-            <div class="testimonials__image-container">
-              <img src="./images/testimonials1.png" alt="" />
-            </div>
-            <div class="testimonials__wrap">
-              <p class="testimonials__text">
-                Nullam viverra consectetuer. Quisque cursus et, porttitor risus. Aliquam sem. In
-                hendrerit nulla quam nunc, accumsan congue. Lorem ipsum primis in nibh vel risus.
-              </p>
-              <svg class="testimonials__icon" width="54" height="40">
-                <use href="./images/icons.svg#icon-testimonials"></use>
-              </svg>
-            </div>
-            <p class="testimonials__owner">Emily, Los Angeles</p>
-          </li>
-          <li class="testimonials__item"></li>
-          <li class="testimonials__item"></li>
-        </ul>
-      </div>
-    </section>
     <section class="testimonials">
+      <h2 class="testimonials__title">Testimonials</h2>
       <div class="container">
         <div class="itcss">
           <div class="itcss__wrapper">
@@ -166,7 +160,7 @@
               </li>
               <li class="itcss__item">
                 <div class="testimonials__image-container">
-                  <img src="./images/testimonials1.png" alt="" />
+                  <img src="./images/testimonials2.png" alt="" />
                 </div>
                 <div class="testimonials__wrap">
                   <p class="testimonials__text">
@@ -178,11 +172,11 @@
                     <use href="./images/icons.svg#icon-testimonials"></use>
                   </svg>
                 </div>
-                <p class="testimonials__owner">Emily, Los Angeles</p>
+                <p class="testimonials__owner">Ida, Ohio</p>
               </li>
               <li class="itcss__item">
                 <div class="testimonials__image-container">
-                  <img src="./images/testimonials1.png" alt="" />
+                  <img src="./images/testimonials3.png" alt="" />
                 </div>
                 <div class="testimonials__wrap">
                   <p class="testimonials__text">
@@ -194,7 +188,7 @@
                     <use href="./images/icons.svg#icon-testimonials"></use>
                   </svg>
                 </div>
-                <p class="testimonials__owner">Emily, Los Angeles</p>
+                <p class="testimonials__owner">Joan, Boston</p>
               </li>
             </ul>
           </div>
@@ -213,16 +207,150 @@
         </div>
       </div>
     </section>
-  </body>
-  <script src="js/slider.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      // инициализация слайдера
-      var slider = new ItcSimpleSlider('.itcss', {
-        loop: true,
-        autoplay: false,
-        swipe: true,
+    <section class="contacts">
+      <div class="container">
+        <h2 class="contacts__title">Contacts</h2>
+        <ul class="contacts__list">
+          <li class="contacts__item">
+            <div class="contacts__wrap">
+              <p class="contacts__card-title">cafe</p>
+              <p class="contacts__location">Chicago</p>
+              <p class="contacts__description">
+                Fusce ut velit laoreet, tempus arcu molestie vulputate
+              </p>
+              <p class="contacts__days">Monday - Friday</p>
+              <p class="contacts__time contacts__time--add-mb">06:00 AM - 10:00 PM</p>
+              <p class="contacts__days">Saturday - Sunday</p>
+              <p class="contacts__time contacts__time--add-pb-border-mb">08:00 AM - 16:00 PM</p>
+              <a class="contacts__contact contacts__contact--mail" href="tel:+610383766284"
+                >+61(0) 383 766 284</a
+              >
+              <a class="contacts__contact contacts__contact--tel" href="mailto:noreply@envato.com"
+                >noreply@envato.com</a
+              >
+            </div>
+          </li>
+          <li class="contacts__item">
+            <div class="contacts__wrap">
+              <p class="contacts__card-title contacts__card-title--otherbgc">foodtruck</p>
+              <p class="contacts__location">Los Angeles</p>
+              <p class="contacts__description">
+                Fusce ut velit laoreet, tempus arcu molestie vulputate
+              </p>
+              <p class="contacts__days">Monday - Friday</p>
+              <p class="contacts__time contacts__time--add-mb">06:00 AM - 10:00 PM</p>
+              <p class="contacts__days">Saturday - Sunday</p>
+              <p class="contacts__time contacts__time--add-pb-border-mb">08:00 AM - 16:00 PM</p>
+              <a class="contacts__contact contacts__contact--mail" href="tel:+610383766284"
+                >+61(0) 383 766 284</a
+              >
+              <a class="contacts__contact contacts__contact--tel" href="mailto:noreply@envato.com"
+                >noreply@envato.com</a
+              >
+            </div>
+          </li>
+          <li class="contacts__item">
+            <div class="contacts__wrap">
+              <p class="contacts__card-title">cafe</p>
+              <p class="contacts__location">New York</p>
+              <p class="contacts__description">
+                Fusce ut velit laoreet, tempus arcu molestie vulputate
+              </p>
+              <p class="contacts__days">Monday - Friday</p>
+              <p class="contacts__time contacts__time--add-mb">06:00 AM - 10:00 PM</p>
+              <p class="contacts__days">Saturday - Sunday</p>
+              <p class="contacts__time contacts__time--add-pb-border-mb">08:00 AM - 16:00 PM</p>
+              <a class="contacts__contact contacts__contact--mail" href="tel:+610383766284"
+                >+61(0) 383 766 284</a
+              >
+              <a class="contacts__contact contacts__contact--tel" href="mailto:noreply@envato.com"
+                >noreply@envato.com</a
+              >
+            </div>
+          </li>
+        </ul>
+        <div class="contacts__buttons">
+          <button class="contacts__btn" type="button">
+            <span class="contacts__btn-meta">Our Locations</span>
+            <svg class="contacts__btn-icon" width="7" height="16">
+              <use href="./images/icons.svg#icon-btn-icon"></use>
+            </svg>
+          </button>
+          <button class="contacts__btn contacts__btn--second" type="button">
+            <span class="contacts__btn-meta">Franchise</span>
+            <svg class="contacts__btn-icon contacts__btn-icon--second" width="7" height="16">
+              <use href="./images/icons.svg#icon-btn-icon"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <p class="footer__title">homemade ice cream made</p>
+        <p class="footer__meta">with passion</p>
+
+        <ul class="social">
+          <li class="social__item">
+            <a
+              class="social__link"
+              href="https://github.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg class="social__icon" width="32" height="32">
+                <use href="./images/icons.svg#icon-github"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a
+              class="social__link"
+              href="https://telegram.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><svg class="social__icon" width="32" height="32">
+                <use href="./images/icons.svg#icon-telegram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a
+              class="social__link"
+              href="https://www.facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg class="social__icon" width="32" height="32">
+                <use href="./images/icons.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <p class="footer__contact">
+          <span>Feel free to contact</span>
+          <a class="footer__tel" href="tel:+610383766284">+61 (0) 383 766 284</a>
+        </p>
+        <p class="footer__copyright footer__copyright--mobile-2-string">
+          &copy; 2019 - IceCream. <br />
+          All Rights Reserved.
+        </p>
+        <p class="footer__copyright footer__copyright--other-1-string">
+          &copy; 2019 - IceCream. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/slider.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        // инициализация слайдера
+        var slider = new ItcSimpleSlider('.itcss', {
+          loop: true,
+          autoplay: true,
+          swipe: true,
+        });
       });
-    });
-  </script>
+    </script>
+  </body>
 </html>

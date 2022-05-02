@@ -3,6 +3,10 @@
   padding-bottom: 40px;
 }
 
+.gallery__title {
+  @extend %visually-hidden;
+}
+
 .images {
   display: grid;
   grid-auto-flow: column;

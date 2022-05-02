@@ -4,6 +4,10 @@
   justify-content: center;
 }
 
+.contacts__list:not(:lastchild) {
+  margin-bottom: 20px;
+}
+
 .contact__item {
   margin-top: 5px;
   margin-bottom: 5px;

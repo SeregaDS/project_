@@ -1,47 +1,105 @@
 .header {
   position: relative;
+  width: 100vw;
+  overflow: hidden;
+  background-color: $bgc-hero-color;
+  z-index: 2;
+}
 
-  &::after {
-    position: absolute;
-    bottom: 0;
-    z-index: -1;
+.header__container {
+  height: 500px;
+  &::before {
     content: '';
-
-    border-bottom: $border-header 1px solid;
-    width: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 83px;
+    left: 36px;
+    border-radius: 50%;
+    width: 345px;
+    height: 345px;
+    background-color: #ffa5ba;
   }
 }
 
-@media screen and (max-width: 767px) {
-  .nav {
-    display: none;
-  }
-  .contact {
-    display: none;
+.header__image {
+  position: absolute;
+  bottom: 0;
+  right: 32px;
+  z-index: 2;
+}
+
+.header__title {
+  position: relative;
+  z-index: 3;
+  margin-top: 136px;
+  font-family: 'Titan One';
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 1.15;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #ffffff;
+  &--color-fz {
+    color: $accent-red-color;
+    font-size: 37px;
   }
 }
 
-@media screen and (min-width: 768px) {
-  .mobile-menu__button {
-    display: none;
-  }
+.header__buttons {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  margin-top: 20px;
+}
 
-  .mobile-menu {
-    display: none;
-    &.is-open {
-      display: none;
-    }
-  }
-
-  .header__container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.header__btn {
+  text-decoration: none;
+  height: 24px;
+  padding-left: 14px;
+  padding-right: 14px;
+  background-color: $accent-red-color;
+  color: $text-white-color;
+  border-radius: 20px;
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 10px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  &--secondary {
+    color: $accent-red-color;
+    background-color: $bgc-white-color;
+    margin-left: 8px;
   }
 }
 
-@media screen and (min-width: 1200px) {
-  .header__container {
-    justify-content: flex-start;
-  }
+.mobile-menu__button {
+  position: absolute;
+  top: 10px;
+  right: 5%;
+  display: flex;
+  background-color: transparent;
+  fill: #d41443;
+  z-index: 60;
+  cursor: pointer;
+  //   transition: $typical-transition-fill;
+
+  //   &:hover {
+  //     fill: $action-color;
+  //   }
+}
+
+// .mobile-menu__button .mobile-menu__close {
+//   display: none;
+// }
+// .mobile-menu__button.is-open .mobile-menu__close {
+//   display: block;
+// }
+
+// .mobile-menu__button.is-open .mobile-menu__burger {
+//   display: none;
+// }
+
+.header__logo {
+  padding-top: 8px;
 }
