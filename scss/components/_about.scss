@@ -2,17 +2,17 @@
   position: relative;
   padding-top: 40px;
   background-color: $bgc-main-color;
+  width: 100vw;
   &::after {
     content: '';
     position: absolute;
-    bottom: 50px;
+    bottom: calc((100vh - 185px) * -1);
     z-index: 1;
-    background-image: url('../images/milkbg.png');
+    background-image: url('../images/milkbgmob1x-left.png');
     background-repeat: no-repeat;
-    background-size: cover;
-
-    width: 100vw;
-    height: 133px;
+    background-size: contain;
+    width: 54px;
+    height: 100vh;
   }
 }
 
@@ -70,3 +70,17 @@
   line-height: 1.62;
   color: $main-text-color;
 }
+
+// .about__bg {
+//   position: absolute;
+//   // margin-left: -20px;
+//   // margin-right: -20px;
+//   // bottom: 50px;
+//   z-index: 1;
+//   background-image: url('../images/milkbgmob1x-left.png');
+//   background-repeat: no-repeat;
+//   // background-size: contain;
+
+//   width: 100vw;
+//   height: 170px;
+// }
