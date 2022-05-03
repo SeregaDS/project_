@@ -1,6 +1,7 @@
 .gallery {
   padding-top: 40px;
   padding-bottom: 40px;
+  background-image: linear-gradient(to bottom, $bgc-main-color 40%, $bgc-white-color 40%);
 }
 
 .gallery__title {

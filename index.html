@@ -14,30 +14,78 @@
     <title>Document</title>
   </head>
   <body>
-    <header class="header">
-      <div class="container">
-        <div class="header__container">
-          <div class="header__logo"><img src="./images/logo1x.png" alt="" /></div>
-          <button class="mobile-menu__button" type="button" aria-expanded="false">
-            <svg aria-label="Переключатель меню" width="40" height="40">
-              <use class="mobile-menu__close" href="./images/icons.svg#icon-close"></use>
-              <use class="mobile-menu__burger" href="./images/icons.svg#icon-burger"></use>
+    <header class="header" id="home">
+      <div class="header__wrapper">
+        <!-- Mobile menu  -->
+        <div class="mobile-menu" data-menu>
+          <button
+            class="mobile-menu__button-close"
+            type="button"
+            aria-expanded="false"
+            data-menu-close
+          >
+            <svg class="mobile-menu__close" aria-label="Переключатель меню" width="14" height="14">
+              <use href="./images/icons.svg#icon-close"></use>
             </svg>
           </button>
-
-          <h1 class="header__title">
-            ice cream <br />
-            made with <br /><span class="header__title--color-fz">passion</span>
-          </h1>
-          <div class="header__buttons">
-            <a class="header__btn" href="">Products</a
-            ><a class="header__btn header__btn--secondary" href="">How it's made?</a>
+          <div class="mobile-menu__overlay">
+            <button class="mobile-menu__btn-buy" type="button">
+              <span class="mobile-menu__btn-meta">Buy now</span>
+              <svg class="mobile-menu__btn-icon" width="7" height="16">
+                <use href="./images/icons.svg#icon-btn-icon"></use>
+              </svg>
+            </button>
+            <ul class="mobile-menu__list">
+              <li class="mobile-menu__item">
+                <a href="#home" class="mobile-menu__link">Home</a>
+              </li>
+              <li class="mobile-menu__item">
+                <a href="#products" class="mobile-menu__link">About us</a>
+              </li>
+              <li class="mobile-menu__item">
+                <a href="#about" class="mobile-menu__link">How it’s made?</a>
+              </li>
+              <li class="mobile-menu__item">
+                <a href="#advantages" class="mobile-menu__link">Our products</a>
+              </li>
+              <li class="mobile-menu__item">
+                <a href="#contacts" class="mobile-menu__link">Contact</a>
+              </li>
+            </ul>
           </div>
-          <div class="header__image"><img src="./images/icecream.png" alt="icecream" /></div>
+        </div>
+        <div class="container">
+          <div class="header__container">
+            <div class="header__logo"><img src="./images/logo1x.png" alt="" /></div>
+            <button
+              class="mobile-menu__button-open"
+              type="button"
+              aria-expanded="false"
+              data-menu-open
+            >
+              <svg
+                class="mobile-menu__burger"
+                aria-label="Переключатель меню"
+                width="20"
+                height="12"
+              >
+                <use href="./images/icons.svg#icon-burger"></use>
+              </svg>
+            </button>
+            <h1 class="header__title">
+              ice cream <br />
+              made with <br /><span class="header__title--color-fz">passion</span>
+            </h1>
+            <div class="header__buttons">
+              <a class="header__btn" href="#products">Products</a
+              ><a class="header__btn header__btn--secondary" href="#about">How it's made?</a>
+            </div>
+            <div class="header__image"><img src="./images/icecream.png" alt="icecream" /></div>
+          </div>
         </div>
       </div>
     </header>
-    <section class="products">
+    <section class="products" id="products">
       <div class="container">
         <h2 class="products__label">100% natural</h2>
         <h2 class="products__title">products</h2>
@@ -86,7 +134,7 @@
         </ul>
       </div>
     </section>
-    <section class="about">
+    <section class="about" id="about">
       <div class="container">
         <p class="about__label">tradition and love</p>
         <h2 class="about__title">how it’s made?</h2>
@@ -102,26 +150,43 @@
           ullam mollitia dolores ad odit vero, atque, nemo possimus voluptates? At rerum non, modi
           exercitationem adipisci ducimus asperiores.
         </p>
-        <button class="about__btn about__btn" type="button">
+        <button class="about__btn" type="button">
           <span class="about__btn-meta">Read more</span>
-          <svg class="about__btn-icon about__btn-icon" width="7" height="16">
+          <svg class="about__btn-icon" width="7" height="16">
             <use href="./images/icons.svg#icon-btn-icon"></use>
           </svg>
+        </button>
       </div>
     </section>
-    <section class="Advantages">
+    <section class="advantages" id="advantages">
       <div class="container">
-        <h2>Advantages // hidden</h2>
-        <ul class="cards">
-          <li></li>
-          <li></li>
-          <li></li>
+        <h2 class="advantages__title">Advantages</h2>
+        <ul class="advantages__list">
+          <li class="advantages__item">
+            <div class="advantages__pic"></div>
+            <p class="advantages__text">721</p>
+            <p class="advantages__description">
+              Aliquam ac dui vel dui vulputate consectetur. Mauris massa.
+            </p>
+          </li>
+          <li class="advantages__item">
+            <div class="advantages__pic"></div>
+            <p class="advantages__text">16kg</p>
+            <p class="advantages__description">
+              Aliquam ac dui vel dui vulputate consectetur. Mauris massa.
+            </p>
+          </li>
+          <li class="advantages__item">
+            <div class="advantages__pic"></div>
+            <p class="advantages__text">84</p>
+            <p class="advantages__description">
+              Aliquam ac dui vel dui vulputate consectetur. Mauris massa.
+            </p>
+          </li>
         </ul>
-
-        <br /><br /><br /><br /><br /><br />
       </div>
     </section>
-    <section class="gallery">
+    <section class="gallery" id="gallery">
       <h2 class="gallery__title">Gallery</h2>
       <div class="container">
         <div class="wrap">
@@ -161,7 +226,7 @@
       </div>
     </section>
 
-    <section class="testimonials">
+    <section class="testimonials" id="testimonials">
       <h2 class="testimonials__title">Testimonials</h2>
       <div class="container">
         <div class="itcss">
@@ -232,7 +297,7 @@
         </div>
       </div>
     </section>
-    <section class="contacts">
+    <section class="contacts" id="contacts">
       <div class="container">
         <h2 class="contacts__title">Contacts</h2>
         <ul class="contacts__list">
@@ -366,6 +431,7 @@
       </div>
     </footer>
 
+    <script src="js/menu2.js"></script>
     <script src="js/slider.min.js"></script>
     <script>
       document.addEventListener('DOMContentLoaded', function () {
