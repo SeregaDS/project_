@@ -532,6 +532,7 @@ button {
 
 .products {
   padding-top: 80px;
+  padding-bottom: 40px;
 }
 
 .products__label {
@@ -676,6 +677,77 @@ button {
 .products__btn {
   border-radius: 50%;
   cursor: pointer;
+}
+
+.about {
+  position: relative;
+  padding-top: 40px;
+  background-color: #fff5f6;
+}
+
+.about::after {
+  content: '';
+  position: absolute;
+  bottom: 50px;
+  z-index: 1;
+  background-image: url("../images/milkbg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 133px;
+}
+
+.about__label {
+  margin-bottom: 15px;
+  font-family: 'Titan One';
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.16;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffa5ba;
+}
+
+.about__title {
+  margin-bottom: 32px;
+  font-family: 'Titan One';
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #d41443;
+}
+
+.about__pic {
+  background-image: url("../images/howitmade.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 100%;
+  height: 279px;
+}
+
+.about__description {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 40px;
+  padding-right: 60px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.62;
+  color: #000000;
+}
+
+.about__text {
+  position: relative;
+  z-index: 2;
+  padding-right: 60px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.62;
+  color: #907e82;
 }
 
 .gallery {
