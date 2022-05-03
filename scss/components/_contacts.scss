@@ -42,7 +42,6 @@
   padding-left: 24px;
   padding-right: 24px;
   max-width: max-content;
-  max-height: 16px;
   border-radius: 4px;
 
   display: flex;
@@ -50,6 +49,8 @@
   text-align: center;
 
   letter-spacing: 0.04em;
+  // *line-height пересчитан из-за несоответствия данных на макете
+  line-height: 1.334;
   text-transform: uppercase;
   color: $text-white-color;
   background-color: #f0d1a5;

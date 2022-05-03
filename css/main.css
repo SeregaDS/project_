@@ -682,6 +682,7 @@ button {
 .about {
   position: relative;
   padding-top: 40px;
+  padding-bottom: 20px;
   background-color: #fff5f6;
   width: 100vw;
 }
@@ -689,9 +690,22 @@ button {
 .about::after {
   content: '';
   position: absolute;
-  bottom: calc((100vh - 185px) * -1);
+  bottom: calc((100vh - 285px) * -1);
   z-index: 1;
   background-image: url("../images/milkbgmob1x-left.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 54px;
+  height: 100vh;
+}
+
+.about::before {
+  content: '';
+  position: absolute;
+  bottom: calc((100vh - 285px) * -1);
+  z-index: 1;
+  right: 0;
+  background-image: url("../images/milkbgmob1x-right.png");
   background-repeat: no-repeat;
   background-size: contain;
   width: 54px;
@@ -734,7 +748,7 @@ button {
   position: relative;
   z-index: 2;
   margin-bottom: 40px;
-  padding-right: 60px;
+  padding-right: calc(100vw - (100vw - 60px));
   font-weight: 500;
   font-size: 12px;
   line-height: 1.62;
@@ -744,11 +758,54 @@ button {
 .about__text {
   position: relative;
   z-index: 2;
+  margin-bottom: 20px;
   padding-right: 60px;
   font-weight: 500;
   font-size: 12px;
   line-height: 1.62;
   color: #907e82;
+}
+
+.contacts__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about__btn {
+  width: 176px;
+  height: 44px;
+  padding-left: 38px;
+  padding-right: 38px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.31;
+  cursor: pointer;
+  background-color: #ffffff;
+  color: #d41342;
+  border-radius: 22px;
+}
+
+.about__btn-icon {
+  stroke: #d41342;
 }
 
 .gallery {
@@ -1161,7 +1218,6 @@ button {
   max-width: -webkit-max-content;
   max-width: -moz-max-content;
   max-width: max-content;
-  max-height: 16px;
   border-radius: 4px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1171,6 +1227,7 @@ button {
           align-items: center;
   text-align: center;
   letter-spacing: 0.04em;
+  line-height: 1.334;
   text-transform: uppercase;
   color: #ffffff;
   background-color: #f0d1a5;

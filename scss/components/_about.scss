@@ -1,14 +1,28 @@
 .about {
   position: relative;
   padding-top: 40px;
+  padding-bottom: 20px;
   background-color: $bgc-main-color;
   width: 100vw;
   &::after {
     content: '';
     position: absolute;
-    bottom: calc((100vh - 185px) * -1);
+    bottom: calc((100vh - 285px) * -1);
     z-index: 1;
     background-image: url('../images/milkbgmob1x-left.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 54px;
+    height: 100vh;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: calc((100vh - 285px) * -1);
+    z-index: 1;
+    right: 0;
+    background-image: url('../images/milkbgmob1x-right.png');
     background-repeat: no-repeat;
     background-size: contain;
     width: 54px;
@@ -52,7 +66,7 @@
   position: relative;
   z-index: 2;
   margin-bottom: 40px;
-  padding-right: 60px;
+  padding-right: calc(100vw - (100vw - 60px));
 
   font-weight: 500;
   font-size: 12px;
@@ -64,6 +78,7 @@
 .about__text {
   position: relative;
   z-index: 2;
+  margin-bottom: 20px;
   padding-right: 60px;
   font-weight: 500;
   font-size: 12px;
@@ -71,16 +86,33 @@
   color: $main-text-color;
 }
 
-// .about__bg {
-//   position: absolute;
-//   // margin-left: -20px;
-//   // margin-right: -20px;
-//   // bottom: 50px;
-//   z-index: 1;
-//   background-image: url('../images/milkbgmob1x-left.png');
-//   background-repeat: no-repeat;
-//   // background-size: contain;
+.contacts__buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-//   width: 100vw;
-//   height: 170px;
-// }
+.about__btn {
+  width: 176px;
+  height: 44px;
+  padding-left: 38px;
+  padding-right: 38px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.31;
+
+  cursor: pointer;
+  background-color: $bgc-white-color;
+  color: #d41342;
+  border-radius: 22px;
+}
+
+.about__btn-icon {
+  stroke: #d41342;
+}
