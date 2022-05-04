@@ -115,3 +115,53 @@
 .about__btn-icon {
   stroke: #d41342;
 }
+
+@media screen and (min-width: 768px) {
+  .about {
+    padding-top: 20px;
+    padding-bottom: 40px;
+    &::after {
+      opacity: 0;
+    }
+
+    &::before {
+      opacity: 0;
+    }
+  }
+
+  .about__label {
+    margin-bottom: 16px;
+    font-size: 26px;
+  }
+  .about__title {
+    margin-bottom: 40px;
+    font-size: 48px;
+  }
+
+  .about__description {
+    padding-right: 0;
+    font-size: 14px;
+    line-height: 1.76;
+  }
+
+  .about__text {
+    margin-bottom: 40px;
+    padding-right: 0;
+    font-size: 14px;
+    line-height: 1.76;
+    color: $main-text-color;
+  }
+
+  .about__wrap {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about__pic {
+    background-image: url('../images/howitmadetablet1x.png');
+    background-position: left;
+    width: 100%;
+    height: 335px;
+  }
+}
