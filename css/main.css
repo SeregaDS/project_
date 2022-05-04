@@ -412,6 +412,11 @@ button {
     padding-right: 18px;
     width: 732px;
   }
+  .container-testimonials {
+    padding-left: 74px;
+    padding-right: 74px;
+    width: 620px;
+  }
 }
 
 @media screen and (min-width: 1280px) {
@@ -424,6 +429,11 @@ button {
     width: 1248px;
     padding-left: 16px;
     padding-right: 16px;
+  }
+  .container-testimonials {
+    padding-left: 123px;
+    padding-right: 123px;
+    width: 1034px;
   }
 }
 
@@ -849,12 +859,14 @@ button {
 .products {
   padding-top: 80px;
   padding-bottom: 40px;
+  width: 100%;
 }
 
 .products__label {
   margin-bottom: 15px;
   font-family: 'Titan One';
   font-size: 18px;
+  font-weight: 400;
   line-height: 1.16;
   text-align: center;
   text-transform: uppercase;
@@ -1034,7 +1046,7 @@ button {
   padding-top: 40px;
   padding-bottom: 20px;
   background-color: #fff5f6;
-  width: 100vw;
+  width: 100%;
 }
 
 .about::after {
@@ -1208,7 +1220,7 @@ button {
   padding-top: 20px;
   padding-bottom: 40px;
   background-color: #fff5f6;
-  width: 100vw;
+  width: 100%;
 }
 
 .advantages__item {
@@ -1383,17 +1395,20 @@ button {
 }
 
 @media screen and (min-width: 768px) {
+  .gallery {
+    padding-bottom: 48px;
+  }
   .images__container {
-    width: 114px;
+    width: 100px;
     -webkit-transition: padding-right 250ms linear, -webkit-transform 250ms linear;
     transition: padding-right 250ms linear, -webkit-transform 250ms linear;
     transition: transform 250ms linear, padding-right 250ms linear;
     transition: transform 250ms linear, padding-right 250ms linear, -webkit-transform 250ms linear;
   }
   .images__container:hover {
-    -webkit-transform: scale(1.8);
-            transform: scale(1.8);
-    padding-right: 91px;
+    -webkit-transform: scale(1.75);
+            transform: scale(1.75);
+    padding-right: 75px;
     z-index: 0;
   }
   .images__container:nth-child(8) {
@@ -1408,6 +1423,11 @@ button {
     -webkit-transform-origin: left bottom;
             transform-origin: left bottom;
   }
+  .images__container:nth-child(10):hover {
+    -webkit-transform: scale(1.55);
+            transform: scale(1.55);
+    padding-right: 0;
+  }
 }
 
 @media screen and (min-width: 1280px) {
@@ -1416,11 +1436,16 @@ button {
     padding-bottom: 60px;
   }
   .images__container {
-    max-width: 140px;
+    width: 140px;
   }
   .images__container:hover {
-    -webkit-transform: scale(2.2);
-            transform: scale(2.2);
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    padding-right: 140px;
+  }
+  .images__container:nth-child(10):hover {
+    -webkit-transform: scale(2);
+            transform: scale(2);
     padding-right: 140px;
   }
 }
@@ -1487,12 +1512,16 @@ button {
   color: #000000;
 }
 
-/**
-  * SimpleAdaptiveSlider by Itchief v2.0.0 (https://github.com/itchief/ui-components/tree/master/simple-adaptive-slider)
-  * Copyright 2020 - 2021 Alexander Maltsev
-  * Licensed under MIT (https://github.com/itchief/ui-components/blob/master/LICENSE)
-  */
-/* стили для корневого элемента слайдера */
+@media screen and (min-width: 768px) {
+  .testimonials__text {
+    font-size: 14px;
+    line-height: 2.16;
+  }
+  .testimonials__owner {
+    font-size: 16px;
+  }
+}
+
 .itcss {
   position: relative;
   overflow: hidden;
@@ -1608,6 +1637,7 @@ button {
           justify-content: center;
   padding-left: 0;
   margin: 0 15%;
+  margin-top: 16px;
   list-style: none;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -1635,6 +1665,12 @@ button {
   background-color: transparent;
   background-image: url("data:image/svg+xml,%3Csvg width='13' height='12' viewBox='0 0 13 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.2399 5.77539C12.4646 5.53163 12.4429 5.15801 12.1914 4.94111L6.65187 0.159738C6.40043 -0.0571627 5.99731 -0.052619 5.75117 0.169981L0.19278 5.19603C-0.053367 5.41863 -0.065448 5.79177 0.166032 6.02912L0.305389 6.17228C0.536586 6.40963 0.910291 6.43793 1.13955 6.2353L1.55495 5.86834V11.2407C1.55495 11.5703 1.82571 11.8372 2.15961 11.8372H4.32629C4.66019 11.8372 4.93095 11.5703 4.93095 11.2407V7.48221H7.69456V11.2407C7.68976 11.5701 7.92867 11.8369 8.26258 11.8369H10.5587C10.8926 11.8369 11.1634 11.5701 11.1634 11.2405V5.94398C11.1634 5.94398 11.2781 6.04315 11.4197 6.16587C11.561 6.28835 11.8577 6.19014 12.0824 5.94614L12.2399 5.77539Z' fill='%23D31342'/%3E%3C/svg%3E%0A");
   border-radius: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .itcss__indicators {
+    margin-top: 32px;
+  }
 }
 
 .contacts {
@@ -1793,6 +1829,81 @@ button {
 
 .contacts__btn-icon--second {
   stroke: #d41342;
+}
+
+@media screen and (min-width: 768px) {
+  .contacts {
+    padding-top: 80px;
+    padding-bottom: 40px;
+  }
+  .contacts__list {
+    margin-bottom: 40px;
+    display: -ms-grid;
+    display: grid;
+    gap: 32px;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+  .contacts__item {
+    font-size: 14px;
+  }
+  .contacts__item:not(:last-child) {
+    margin-bottom: 0;
+  }
+  .contacts__card-title {
+    margin-bottom: 32px;
+    border-radius: 6px;
+    line-height: 1.86;
+  }
+  .contacts__location {
+    margin-bottom: 12px;
+  }
+  .contacts__description {
+    margin-bottom: 32px;
+    padding-right: 30px;
+    padding-bottom: 32px;
+    line-height: 1.66;
+  }
+  .contacts__time {
+    text-transform: uppercase;
+    color: #ffa5ba;
+  }
+  .contacts__time--add-mb {
+    margin-bottom: 12px;
+  }
+  .contacts__time--add-pb-border-mb {
+    padding-bottom: 32px;
+    margin-bottom: 32px;
+  }
+  .contacts__contact {
+    line-height: 1.83;
+  }
+  .contacts__buttons {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .contacts__btn {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    padding-left: 30px;
+    padding-right: 30px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .contacts__btn--second {
+    margin-top: 0;
+    margin-left: 15px;
+  }
+  .contacts__btn-icon {
+    margin-left: 14px;
+  }
 }
 
 .footer {

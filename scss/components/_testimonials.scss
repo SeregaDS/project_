@@ -6,9 +6,6 @@
   @extend %visually-hidden;
 }
 
-// .testimonials__list {
-// }
-
 .testimonials__item {
   display: grid;
   justify-items: center;
@@ -70,4 +67,15 @@
   line-height: 1.86;
   text-align: center;
   color: $text-black-color;
+}
+
+@media screen and (min-width: 768px) {
+  .testimonials__text {
+    font-size: 14px;
+    line-height: 2.16;
+  }
+
+  .testimonials__owner {
+    font-size: 16px;
+  }
 }

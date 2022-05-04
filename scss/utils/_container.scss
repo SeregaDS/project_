@@ -23,6 +23,12 @@
     padding-right: 18px;
     width: 732px;
   }
+
+  .container-testimonials {
+    padding-left: 74px;
+    padding-right: 74px;
+    width: 620px;
+  }
 }
 
 @media screen and (min-width: 1280px) {
@@ -35,5 +41,11 @@
     width: 1248px;
     padding-left: 16px;
     padding-right: 16px;
+  }
+
+  .container-testimonials {
+    padding-left: 123px;
+    padding-right: 123px;
+    width: 1034px;
   }
 }
