@@ -995,6 +995,36 @@ button {
   cursor: pointer;
 }
 
+@media screen and (min-width: 768px) {
+  .products {
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
+  .products__wrap {
+    padding-top: 32px;
+  }
+  .products__cards {
+    display: -ms-grid;
+    display: grid;
+    gap: 16px;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+  .products__pic {
+    height: 224px;
+  }
+  .products__pic::after {
+    height: 224px;
+  }
+  .products__title {
+    margin-bottom: 16px;
+  }
+  .products__description {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
 .about {
   position: relative;
   padding-top: 40px;
