@@ -1947,7 +1947,7 @@ button {
   font-style: normal;
   font-weight: 400;
   font-size: 34px;
-  line-height: 39px;
+  line-height: 1.14;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: #d41443;
@@ -1981,6 +1981,42 @@ button {
 
 .footer__copyright--other-1-string {
   display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .footer::before {
+    bottom: 42px;
+  }
+  .footer__title {
+    margin-bottom: 12px;
+    padding-right: 0;
+    font-size: 26px;
+    letter-spacing: 0.04em;
+  }
+  .footer__meta {
+    margin-bottom: 40px;
+    padding-right: 0;
+    font-size: 48px;
+    letter-spacing: 0.06em;
+  }
+  .footer__contact {
+    font-size: 14px;
+  }
+  .footer__copyright {
+    display: block;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    line-height: 1.86;
+  }
+  .footer__copyright--other-2-string {
+    display: none;
+  }
+  .footer__wrap {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .social {
