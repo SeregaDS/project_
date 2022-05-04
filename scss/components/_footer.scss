@@ -85,7 +85,7 @@
   }
 
   .footer__meta {
-    margin-bottom: 40px;
+    margin-bottom: 0px;
     padding-right: 0;
     font-size: 48px;
     letter-spacing: 0.06em;
@@ -93,6 +93,7 @@
 
   .footer__contact {
     font-size: 14px;
+    margin-bottom: 0;
   }
 
   .footer__copyright {
@@ -107,6 +108,7 @@
   }
 
   .footer__wrap {
+    margin-bottom: 40px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
