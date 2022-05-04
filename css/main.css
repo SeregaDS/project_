@@ -453,7 +453,7 @@ button {
 
 .header {
   position: relative;
-  width: 100vw;
+  width: 100%;
   background-color: #ffb8ca;
   z-index: 2;
 }
@@ -524,7 +524,7 @@ button {
   border-radius: 20px;
   font-weight: 400;
   font-size: 8px;
-  line-height: 10px;
+  line-height: 1.25;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -701,13 +701,16 @@ button {
   display: none;
 }
 
+.header__nav {
+  display: none;
+}
+
 @media screen and (min-width: 768px) {
   .header__container {
     padding-top: 32px;
     height: 384px;
   }
   .header__container::before {
-    content: '';
     top: 43px;
     left: 216px;
     width: 335px;
@@ -763,6 +766,10 @@ button {
     background-color: #ffffff;
     color: #d41342;
     border-radius: 22px;
+  }
+  .header__btn-icon {
+    stroke: #d41342;
+    margin-left: 12px;
   }
   .header__image-milk {
     position: absolute;
@@ -853,6 +860,124 @@ button {
     height: 16px;
     background-color: #ffffff;
     border-radius: 50%;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .header__container {
+    height: 624px;
+    padding-top: 40px;
+  }
+  .header__container::before {
+    top: 54px;
+    left: 501px;
+    width: 534px;
+    height: 534px;
+  }
+  .header__image-icecream {
+    position: absolute;
+    width: 236px;
+    bottom: 0;
+    left: 636px;
+    z-index: 2;
+  }
+  .header__title {
+    margin-top: 60px;
+    font-size: 38px;
+    color: #ffffff;
+  }
+  .header__title--color-fz {
+    font-size: 58px;
+  }
+  .header__buttons {
+    margin-top: 24px;
+  }
+  .header__btn {
+    height: 40px;
+    padding-left: 24px;
+    padding-right: 24px;
+    font-size: 14px;
+    line-height: 1.28;
+  }
+  .header__btn:hover,
+  .header__btn :focus {
+    background-color: #c7133e;
+  }
+  .header__btn--secondary {
+    margin-left: 12px;
+  }
+  .header__btn--secondary:hover,
+  .header__btn :focus {
+    background-color: #ecebeb;
+  }
+  .mobile-menu__button-open {
+    display: none;
+  }
+  .header__btn-buy {
+    top: 40px;
+  }
+  .header__btn-buy:hover, .header__btn-buy:focus {
+    background-color: #ecebeb;
+  }
+  .header__image-milk {
+    bottom: 60px;
+  }
+  .header__text-block {
+    left: 213px;
+    top: 456px;
+  }
+  .header__text-wrap {
+    width: 200px;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  .header__block-btn {
+    margin-top: 20px;
+    width: 26px;
+    height: 26px;
+  }
+  .header__counts {
+    top: 153px;
+    gap: 18px;
+  }
+  .header__counts-element {
+    padding-right: 18px;
+  }
+  .header__counts-count {
+    font-size: 46px;
+  }
+  .header__counts-text {
+    font-size: 14px;
+    line-height: 1.28;
+    color: #ffffff;
+  }
+  .header__counts-text::before {
+    width: 30px;
+    height: 30px;
+  }
+  .header__nav {
+    display: block;
+  }
+  .nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    top: 52px;
+    left: 374px;
+    z-index: 3;
+  }
+  .nav__item:not(:last-child) {
+    margin-right: 35px;
+  }
+  .nav__link {
+    font-size: 16px;
+    line-height: 1.31;
+    text-decoration: none;
+    color: #ffffff;
+  }
+  .nav__link:hover, .nav__link:focus {
+    color: #d41443;
   }
 }
 
