@@ -173,5 +173,49 @@
   .products__description {
     padding-left: 32px;
     padding-right: 32px;
+    line-height: 1.52;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .products {
+    padding-top: 60px;
+  }
+
+  .products__label {
+    margin-bottom: 16px;
+    font-size: 30px;
+    line-height: 1.13;
+    letter-spacing: 0.04em;
+  }
+
+  .products__title {
+    margin-bottom: 0;
+    font-size: 58px;
+    letter-spacing: 0.06em;
+  }
+
+  .products__cards {
+    gap: 32px;
+  }
+
+  .products__pic {
+    height: 394px;
+    // image-set('../images/bg/hero-bg-tab.jpg' 1x, '../images/bg/hero-bg-tab@x2.jpg' 2x);
+    &::before {
+      top: 198px;
+      height: 197px;
+    }
+  }
+  .products__description {
+    margin-bottom: 60px;
+    padding-left: 77px;
+    padding-right: 77px;
+    font-size: 16px;
+    line-height: 1.76;
+  }
+
+  .products__wrap {
+    padding-bottom: 60px;
   }
 }
