@@ -58,7 +58,17 @@
         <!-- Header  -->
         <div class="container">
           <div class="header__container">
-            <div class="header__logo"><img src="./images/logo1x.png" alt="" /></div>
+            <div class="header__logo">
+              <img
+                src="./images/header/logo1x.png"
+                srcset="
+                  ./images/header/logo1x.png 1x,
+                  ./images/header/logo2x.png 2x,
+                  ./images/header/logo3x.png 3x
+                "
+                alt="company logo"
+              />
+            </div>
             <button
               class="mobile-menu__button-open"
               type="button"
@@ -108,13 +118,89 @@
               ><a class="header__btn header__btn--secondary" href="#about">How it's made?</a>
             </div>
             <div class="header__image-icecream">
-              <img src="./images/icecream.png" alt="icecream" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/header/iced1x.png 1x,
+                    ./images/header/iced2x.png 2x,
+                    ./images/header/iced3x.png 3x
+                  "
+                  media="(min-width:1280px)"
+                  type="image/png"
+                />
+
+                <source
+                  srcset="
+                    ./images/header/icet1x.png 1x,
+                    ./images/header/icet2x.png 2x,
+                    ./images/header/icet3x.png 3x
+                  "
+                  media="(min-width:768px)"
+                  type="image/png"
+                />
+
+                <source
+                  srcset="
+                    ./images/header/icem1x.png 1x,
+                    ./images/header/icem2x.png 2x,
+                    ./images/header/icem3x.png 3x
+                  "
+                  media="(max-width:767px)"
+                  type="image/png"
+                />
+
+                <img src="./images/header/icem1x.png" alt="icecream" />
+              </picture>
             </div>
             <div class="header__image-milk">
-              <img src="./images/milk-header1x.png" alt="milk" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/header/milkd1x.png 1x,
+                    ./images/header/milkd2x.png 2x,
+                    ./images/header/milkd3x.png 3x
+                  "
+                  media="(min-width:1280px)"
+                  type="image/png"
+                />
+
+                <source
+                  srcset="
+                    ./images/header/milkt1x.png 1x,
+                    ./images/header/milkt2x.png 2x,
+                    ./images/header/milkt3x.png 3x
+                  "
+                  media="(min-width:768px)"
+                  type="image/png"
+                />
+
+                <img src="./images/header/milkt1x.png" alt="milk" />
+              </picture>
             </div>
             <div class="header__image-girl">
-              <img src="./images/girl-header1x.png" alt="girl with icecream" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/header/girld1x.png 1x,
+                    ./images/header/girld2x.png 2x,
+                    ./images/header/girld3x.png 3x
+                  "
+                  media="(min-width:1280px)"
+                  type="image/png"
+                />
+
+                <source
+                  srcset="
+                    ./images/header/girlt1x.png 1x,
+                    ./images/header/girlt2x.png 2x,
+                    ./images/header/girlt3x.png 3x
+                  "
+                  media="(min-width:768px)"
+                  type="image/png"
+                />
+
+                <img src="./images/header/girlt1x.png" alt="girl" />
+              </picture>
             </div>
             <div class="header__text-block">
               <p class="header__text-wrap">
@@ -294,7 +380,15 @@
             <ul class="itcss__items">
               <li class="itcss__item">
                 <div class="testimonials__image-container">
-                  <img src="./images/testimonials1.png" alt="" />
+                  <img
+                    src="./images/testimonials/1x1.png"
+                    srcset="
+                      ./images/testimonials/1x1.png 1x,
+                      ./images/testimonials/1x2.png 2x,
+                      ./images/testimonials/1x3.png 3x
+                    "
+                    alt="emily from la"
+                  />
                 </div>
                 <div class="testimonials__wrap">
                   <p class="testimonials__text">
@@ -310,7 +404,15 @@
               </li>
               <li class="itcss__item">
                 <div class="testimonials__image-container">
-                  <img src="./images/testimonials2.png" alt="" />
+                  <img
+                    src="./images/testimonials/2x1.png"
+                    srcset="
+                      ./images/testimonials/2x1.png 1x,
+                      ./images/testimonials/2x2.png 2x,
+                      ./images/testimonials/2x3.png 3x
+                    "
+                    alt="ida from ohio"
+                  />
                 </div>
                 <div class="testimonials__wrap">
                   <p class="testimonials__text">
@@ -326,7 +428,15 @@
               </li>
               <li class="itcss__item">
                 <div class="testimonials__image-container">
-                  <img src="./images/testimonials3.png" alt="" />
+                  <img
+                    src="./images/testimonials/3x1.png"
+                    srcset="
+                      ./images/testimonials/3x1.png 1x,
+                      ./images/testimonials/3x2.png 2x,
+                      ./images/testimonials/3x3.png 3x
+                    "
+                    alt="joan from boston"
+                  />
                 </div>
                 <div class="testimonials__wrap">
                   <p class="testimonials__text">

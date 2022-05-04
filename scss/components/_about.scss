@@ -165,3 +165,55 @@
     height: 335px;
   }
 }
+
+@media screen and (min-width: 1280px) {
+  .about {
+    position: relative;
+    padding-top: 60px;
+    padding-bottom: 20px;
+    background-color: $bgc-main-color;
+    width: 100%;
+    &::after {
+      opacity: 1;
+      top: 236px;
+      background-image: url('../images/milkdesk1x-left.png');
+      width: 169px;
+      height: 100%;
+    }
+
+    &::before {
+      opacity: 1;
+      top: 236px;
+      right: 0;
+      background-image: url('../images/milkdesk1x-right.png');
+      width: 294px;
+      height: 100%;
+    }
+  }
+
+  .about__label {
+    margin-bottom: 16px;
+    font-size: 30px;
+    line-height: 1.13;
+    letter-spacing: 0.04em;
+  }
+
+  .about__title {
+    margin-bottom: 80px;
+    font-size: 58px;
+    line-height: 1.13;
+    letter-spacing: 0.06em;
+  }
+
+  .about__description {
+    margin-bottom: 32px;
+
+    font-size: 16px;
+    letter-spacing: 0.04em;
+  }
+
+  .about__text {
+    line-height: 1.94;
+    letter-spacing: 0.04em;
+  }
+}

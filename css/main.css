@@ -1379,6 +1379,52 @@ button {
   }
 }
 
+@media screen and (min-width: 1280px) {
+  .about {
+    position: relative;
+    padding-top: 60px;
+    padding-bottom: 20px;
+    background-color: #fff5f6;
+    width: 100%;
+  }
+  .about::after {
+    opacity: 1;
+    top: 236px;
+    background-image: url("../images/milkdesk1x-left.png");
+    width: 169px;
+    height: 100%;
+  }
+  .about::before {
+    opacity: 1;
+    top: 236px;
+    right: 0;
+    background-image: url("../images/milkdesk1x-right.png");
+    width: 294px;
+    height: 100%;
+  }
+  .about__label {
+    margin-bottom: 16px;
+    font-size: 30px;
+    line-height: 1.13;
+    letter-spacing: 0.04em;
+  }
+  .about__title {
+    margin-bottom: 80px;
+    font-size: 58px;
+    line-height: 1.13;
+    letter-spacing: 0.06em;
+  }
+  .about__description {
+    margin-bottom: 32px;
+    font-size: 16px;
+    letter-spacing: 0.04em;
+  }
+  .about__text {
+    line-height: 1.94;
+    letter-spacing: 0.04em;
+  }
+}
+
 .advantages {
   padding-top: 20px;
   padding-bottom: 40px;
@@ -1445,6 +1491,25 @@ button {
   }
   .advantages__description {
     font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .advantages__item {
+    max-width: 300px;
+  }
+  .advantages__item:not(:last-child) {
+    margin-bottom: 0;
+  }
+  .advantages__list {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .advantages__description {
+    font-size: 16px;
+    line-height: 1.76;
+    letter-spacing: 0.02em;
   }
 }
 
@@ -1682,6 +1747,12 @@ button {
   }
   .testimonials__owner {
     font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .testimonials {
+    padding-bottom: 60px;
   }
 }
 
@@ -2069,6 +2140,31 @@ button {
   }
 }
 
+@media screen and (min-width: 1280px) {
+  .contacts {
+    padding-top: 60px;
+    padding-bottom: 0;
+  }
+  .contacts__list {
+    margin-bottom: 60px;
+  }
+  .contacts__item {
+    font-size: 16px;
+  }
+  .contacts__btn {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+  .contacts__btn:hover,
+  .contacts__btn :focus {
+    background-color: #c7133e;
+  }
+  .contacts__btn--second:hover,
+  .contacts__btn :focus {
+    background-color: #ecebeb;
+  }
+}
+
 .footer {
   position: relative;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(27%, #fff5f6), color-stop(27%, #fff5f6));
@@ -2181,6 +2277,23 @@ button {
     display: grid;
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .footer__wrap {
+    margin-top: 120px;
+    margin-bottom: 60px;
+  }
+  .footer__title {
+    margin-bottom: 16px;
+    font-size: 30px;
+  }
+  .footer__meta {
+    font-size: 58px;
+  }
+  .footer__contact {
+    font-size: 16px;
   }
 }
 
