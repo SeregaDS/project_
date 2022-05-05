@@ -8,10 +8,6 @@
   @extend %visually-hidden;
 }
 
-// .advantages__list {
-
-// }
-
 .advantages__item {
   display: flex;
   flex-direction: column;
@@ -24,8 +20,28 @@
 .advantages__pic {
   height: 50px;
   width: 100%;
-  background-image: url('../images/advantages1.png');
+  background-image: image-set(
+    '../images/advantage/1x1.png' 1x,
+    '../images/advantage/1x2.png' 2x,
+    '../images/advantage/1x3.png' 3x
+  );
   background-repeat: no-repeat;
+
+  &--second {
+    background-image: image-set(
+      '../images/advantage/2x1.png' 1x,
+      '../images/advantage/2x2.png' 2x,
+      '../images/advantage/2x3.png' 3x
+    );
+  }
+
+  &--third {
+    background-image: image-set(
+      '../images/advantage/3x1.png' 1x,
+      '../images/advantage/3x2.png' 2x,
+      '../images/advantage/3x3.png' 3x
+    );
+  }
 }
 
 .advantages__text {
@@ -69,6 +85,33 @@
   .advantages__description {
     font-size: 14px;
   }
+
+  .advantages__pic {
+    height: 50px;
+    width: 100%;
+    background-image: image-set(
+      '../images/advantage/1x1.png' 1x,
+      '../images/advantage/1x2.png' 2x,
+      '../images/advantage/1x3.png' 3x
+    );
+    background-repeat: no-repeat;
+
+    &--second {
+      background-image: image-set(
+        '../images/advantage/2x1.png' 1x,
+        '../images/advantage/2x2.png' 2x,
+        '../images/advantage/2x3.png' 3x
+      );
+    }
+
+    &--third {
+      background-image: image-set(
+        '../images/advantage/3x1.png' 1x,
+        '../images/advantage/3x2.png' 2x,
+        '../images/advantage/3x3.png' 3x
+      );
+    }
+  }
 }
 
 @media screen and (min-width: 1280px) {
@@ -87,5 +130,32 @@
     font-size: 16px;
     line-height: 1.76;
     letter-spacing: 0.02em;
+  }
+
+  .advantages__pic {
+    height: 50px;
+    width: 100%;
+    background-image: image-set(
+      '../images/advantage/1x1.png' 1x,
+      '../images/advantage/1x2.png' 2x,
+      '../images/advantage/1x3.png' 3x
+    );
+    background-repeat: no-repeat;
+
+    &--second {
+      background-image: image-set(
+        '../images/advantage/2x1.png' 1x,
+        '../images/advantage/2x2.png' 2x,
+        '../images/advantage/2x3.png' 3x
+      );
+    }
+
+    &--third {
+      background-image: image-set(
+        '../images/advantage/3x1.png' 1x,
+        '../images/advantage/3x2.png' 2x,
+        '../images/advantage/3x3.png' 3x
+      );
+    }
   }
 }

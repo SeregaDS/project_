@@ -1332,7 +1332,8 @@ button {
 }
 
 .about__pic {
-  background-image: url("../images/howitmade.png");
+  background-image: -webkit-image-set(url("../images/about/m1x1.png") 1x, url("../images/about/m1x2.png") 2x, url("../images/about/m1x3.png") 3x);
+  background-image: image-set("../images/about/m1x1.png" 1x, "../images/about/m1x2.png" 2x, "../images/about/m1x3.png" 3x);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -1443,7 +1444,8 @@ button {
         grid-template-columns: repeat(2, 1fr);
   }
   .about__pic {
-    background-image: url("../images/howitmadetablet1x.png");
+    background-image: -webkit-image-set(url("../images/about/t1x1.png") 1x, url("../images/about/t1x2.png") 2x, url("../images/about/t1x3.png") 3x);
+    background-image: image-set("../images/about/t1x1.png" 1x, "../images/about/t1x2.png" 2x, "../images/about/t1x3.png" 3x);
     background-position: left;
     width: 100%;
     height: 335px;
@@ -1494,6 +1496,11 @@ button {
     line-height: 1.94;
     letter-spacing: 0.04em;
   }
+  .about__pic {
+    background-image: -webkit-image-set(url("../images/about/d1x1.png") 1x, url("../images/about/d1x2.png") 2x, url("../images/about/d1x3.png") 3x);
+    background-image: image-set("../images/about/d1x1.png" 1x, "../images/about/d1x2.png" 2x, "../images/about/d1x3.png" 3x);
+    height: 501px;
+  }
 }
 
 .advantages {
@@ -1531,12 +1538,12 @@ button {
   background-image: image-set("../images/advantage/2x1.png" 1x, "../images/advantage/2x2.png" 2x, "../images/advantage/2x3.png" 3x);
 }
 
-.advantages__pic--second--third {
+.advantages__pic--third {
   background-image: -webkit-image-set(url("../images/advantage/3x1.png") 1x, url("../images/advantage/3x2.png") 2x, url("../images/advantage/3x3.png") 3x);
   background-image: image-set("../images/advantage/3x1.png" 1x, "../images/advantage/3x2.png" 2x, "../images/advantage/3x3.png" 3x);
 }
 
-.advantages__pic .advantages__text {
+.advantages__text {
   margin-top: 16px;
   font-family: 'Titan One';
   font-style: normal;
@@ -1548,51 +1555,80 @@ button {
   color: #d41443;
 }
 
-.advantages__pic .advantages__description {
+.advantages__description {
   margin-top: 13px;
   font-weight: 700;
   font-size: 12px;
   line-height: 1.74;
-  text-decoration: line-through;
 }
 
 @media screen and (min-width: 768px) {
-  .advantages__pic .advantages {
+  .advantages {
     padding-top: 40px;
   }
-  .advantages__pic .advantages__list {
+  .advantages__list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  .advantages__pic .advantages__item {
+  .advantages__item {
     margin-bottom: 0;
   }
-  .advantages__pic .advantages__text {
+  .advantages__text {
     margin-top: 36px;
     font-size: 48px;
   }
-  .advantages__pic .advantages__description {
+  .advantages__description {
     font-size: 14px;
+  }
+  .advantages__pic {
+    height: 50px;
+    width: 100%;
+    background-image: -webkit-image-set(url("../images/advantage/1x1.png") 1x, url("../images/advantage/1x2.png") 2x, url("../images/advantage/1x3.png") 3x);
+    background-image: image-set("../images/advantage/1x1.png" 1x, "../images/advantage/1x2.png" 2x, "../images/advantage/1x3.png" 3x);
+    background-repeat: no-repeat;
+  }
+  .advantages__pic--second {
+    background-image: -webkit-image-set(url("../images/advantage/2x1.png") 1x, url("../images/advantage/2x2.png") 2x, url("../images/advantage/2x3.png") 3x);
+    background-image: image-set("../images/advantage/2x1.png" 1x, "../images/advantage/2x2.png" 2x, "../images/advantage/2x3.png" 3x);
+  }
+  .advantages__pic--third {
+    background-image: -webkit-image-set(url("../images/advantage/3x1.png") 1x, url("../images/advantage/3x2.png") 2x, url("../images/advantage/3x3.png") 3x);
+    background-image: image-set("../images/advantage/3x1.png" 1x, "../images/advantage/3x2.png" 2x, "../images/advantage/3x3.png" 3x);
   }
 }
 
 @media screen and (min-width: 1280px) {
-  .advantages__pic .advantages__item {
+  .advantages__item {
     max-width: 300px;
   }
-  .advantages__pic .advantages__item:not(:last-child) {
+  .advantages__item:not(:last-child) {
     margin-bottom: 0;
   }
-  .advantages__pic .advantages__list {
+  .advantages__list {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  .advantages__pic .advantages__description {
+  .advantages__description {
     font-size: 16px;
     line-height: 1.76;
     letter-spacing: 0.02em;
+  }
+  .advantages__pic {
+    height: 50px;
+    width: 100%;
+    background-image: -webkit-image-set(url("../images/advantage/1x1.png") 1x, url("../images/advantage/1x2.png") 2x, url("../images/advantage/1x3.png") 3x);
+    background-image: image-set("../images/advantage/1x1.png" 1x, "../images/advantage/1x2.png" 2x, "../images/advantage/1x3.png" 3x);
+    background-repeat: no-repeat;
+  }
+  .advantages__pic--second {
+    background-image: -webkit-image-set(url("../images/advantage/2x1.png") 1x, url("../images/advantage/2x2.png") 2x, url("../images/advantage/2x3.png") 3x);
+    background-image: image-set("../images/advantage/2x1.png" 1x, "../images/advantage/2x2.png" 2x, "../images/advantage/2x3.png" 3x);
+  }
+  .advantages__pic--third {
+    background-image: -webkit-image-set(url("../images/advantage/3x1.png") 1x, url("../images/advantage/3x2.png") 2x, url("../images/advantage/3x3.png") 3x);
+    background-image: image-set("../images/advantage/3x1.png" 1x, "../images/advantage/3x2.png" 2x, "../images/advantage/3x3.png" 3x);
   }
 }
 

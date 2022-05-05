@@ -54,7 +54,11 @@
 }
 
 .about__pic {
-  background-image: url('../images/howitmade.png');
+  background-image: image-set(
+    '../images/about/m1x1.png' 1x,
+    '../images/about/m1x2.png' 2x,
+    '../images/about/m1x3.png' 3x
+  );
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -159,7 +163,11 @@
   }
 
   .about__pic {
-    background-image: url('../images/howitmadetablet1x.png');
+    background-image: image-set(
+      '../images/about/t1x1.png' 1x,
+      '../images/about/t1x2.png' 2x,
+      '../images/about/t1x3.png' 3x
+    );
     background-position: left;
     width: 100%;
     height: 335px;
@@ -215,5 +223,14 @@
   .about__text {
     line-height: 1.94;
     letter-spacing: 0.04em;
+  }
+
+  .about__pic {
+    background-image: image-set(
+      '../images/about/d1x1.png' 1x,
+      '../images/about/d1x2.png' 2x,
+      '../images/about/d1x3.png' 3x
+    );
+    height: 501px;
   }
 }
