@@ -210,7 +210,7 @@
   display: none;
 }
 
-.image-milk {
+.header__image-milk {
   display: none;
 }
 
@@ -299,6 +299,7 @@
   }
 
   .header__image-milk {
+    display: block;
     position: absolute;
     bottom: 16px;
     z-index: 2;
