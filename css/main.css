@@ -387,6 +387,17 @@ button {
   border-width: 0;
 }
 
+.body {
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.body::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
 .container {
   max-width: 100%;
   padding-left: 20px;
@@ -2499,8 +2510,8 @@ button {
   right: 3%;
   background-color: #fff5f6;
   border-radius: 150px;
-  -webkit-box-shadow: 0px 1px 3px rgba(212, 20, 67, 0.12), 0px 1px 1px rgba(212, 20, 67, 0.14), 0px 2px 1px rgba(212, 20, 67, 0.2);
-          box-shadow: 0px 1px 3px rgba(212, 20, 67, 0.12), 0px 1px 1px rgba(212, 20, 67, 0.14), 0px 2px 1px rgba(212, 20, 67, 0.2);
+  -webkit-box-shadow: inset 0px 0px 100px 0px #ffb8ca, 0px 0px 33px 20px #ffb8ca;
+          box-shadow: inset 0px 0px 100px 0px #ffb8ca, 0px 0px 33px 20px #ffb8ca;
   -webkit-transform: scale(1);
           transform: scale(1);
   -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -2526,7 +2537,8 @@ button {
       -ms-flex-align: center;
           align-items: center;
   background-color: #fff5f6;
-  border: 2px solid rgba(212, 20, 67, 0.1);
+  -webkit-box-shadow: inset 0px 0px 8px 0px #d41443;
+          box-shadow: inset 0px 0px 8px 0px #d41443;
   border-radius: 50%;
   stroke: #ffa5ba;
   cursor: pointer;
@@ -2612,13 +2624,13 @@ button {
 }
 
 .join-form__label:hover {
-  color: #ffa5ba;
+  color: #d41443;
   cursor: pointer;
 }
 
 .join-form__label:hover .join-form__input,
 .join-form__label:hover .join-form__inputtext {
-  border-color: #ffa5ba;
+  border-color: #d41443;
   cursor: pointer;
 }
 
@@ -2627,22 +2639,23 @@ button {
 }
 
 .join-form__label:hover .join-form__name {
-  color: #ffa5ba;
+  color: #d41443;
 }
 
 .join-form__label:hover .join-form__icon {
-  fill: #ffa5ba;
+  fill: #d41443;
 }
 
 .join-form__name {
   margin-bottom: 4px;
-  color: #907e82;
+  color: #ffb8ca;
   font-size: 12px;
   line-height: 1.67;
   letter-spacing: 0.01em;
 }
 
 .join-form__input {
+  background-color: rgba(255, 184, 202, 0.1);
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -2653,31 +2666,32 @@ button {
 }
 
 .join-form__input:focus ~ .join-form__icon {
-  fill: #ffa5ba;
+  fill: #d41443;
 }
 
 .join-form__input:focus ~ .join-form__name {
-  color: #ffa5ba;
+  color: #d41443;
 }
 
 .join-form__input:not(:placeholder-shown) {
-  border: 1px solid #ffa5ba;
+  border: 1px solid #d41443;
 }
 
 .join-form__input:not(:placeholder-shown) + .join-form__icon {
-  fill: #ffa5ba;
+  fill: #d41443;
 }
 
 .join-form__input:not(:placeholder-shown) ~ .join-form__name {
-  color: #ffa5ba;
+  color: #d41443;
 }
 
 .join-form__input:focus {
-  border: 1px solid #ffa5ba;
+  border: 1px solid #d41443;
   outline: none;
 }
 
 .join-form__inputtext {
+  background-color: rgba(255, 184, 202, 0.1);
   resize: none;
   max-height: 50px;
   display: block;
@@ -2690,20 +2704,20 @@ button {
 }
 
 .join-form__inputtext:focus {
-  border: 1px solid #ffa5ba;
+  border: 1px solid #d41443;
   outline: none;
 }
 
 .join-form__inputtext:not(:placeholder-shown) {
-  border: 1px solid #ffa5ba;
+  border: 1px solid #d41443;
 }
 
 .join-form__inputtext:focus ~ .join-form__name {
-  color: #ffa5ba;
+  color: #d41443;
 }
 
 .join-form__inputtext:not(:placeholder-shown) ~ .join-form__name {
-  color: #ffa5ba;
+  color: #d41443;
 }
 
 .join-form__inputtext::-webkit-input-placeholder {
@@ -2739,6 +2753,7 @@ button {
   left: 12px;
   bottom: 11px;
   display: block;
+  fill: #ffb8ca;
 }
 
 .join-form__accept {
@@ -2775,15 +2790,15 @@ button {
 }
 
 .join-form__checkboxhidden:focus ~ .join-form__checkbox {
-  outline: 3px solid #ffa5ba;
+  outline: 3px solid #d41443;
   border-radius: 2px;
   -webkit-box-shadow: 1px -1px 0px 0px #ffa5ba inset, -1px 1px 0px 0px #ffa5ba inset;
           box-shadow: 1px -1px 0px 0px #ffa5ba inset, -1px 1px 0px 0px #ffa5ba inset;
 }
 
 .join-form__checkboxhidden:focus ~ .join-form__checkboxchecked {
-  outline: 3px solid #907e82;
-  border-radius: 2px;
+  outline: 3px solid #d41443;
+  border-radius: 1px;
   -webkit-box-shadow: 1px -1px 0px 0px #907e82 inset, -1px 1px 0px 0px #907e82 inset;
           box-shadow: 1px -1px 0px 0px #907e82 inset, -1px 1px 0px 0px #907e82 inset;
 }
@@ -2812,6 +2827,10 @@ button {
 .join-form__offerlink {
   color: #ffa5ba;
   text-decoration: underline;
+}
+
+.join-form__offerlink:hover, .join-form__offerlink:focus {
+  color: #d41443;
 }
 
 .join-form__submit {
