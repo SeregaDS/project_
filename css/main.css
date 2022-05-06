@@ -2470,6 +2470,7 @@ button {
 
 .backdrop {
   position: fixed;
+  overflow: hidden;
   top: 0;
   left: 0;
   z-index: 99;
@@ -2495,8 +2496,8 @@ button {
 }
 
 .backdrop.is-hidden .modal {
-  -webkit-transform: scale(0.1);
-          transform: scale(0.1);
+  -webkit-transform: translate(-50%, -50%) scale(0.1);
+          transform: translate(-50%, -50%) scale(0.1);
 }
 
 .modal-open {
@@ -2505,15 +2506,15 @@ button {
 
 .modal {
   position: absolute;
-  top: 3%;
-  left: 3%;
-  right: 3%;
+  width: 320px;
+  top: 50%;
+  left: 50%;
   background-color: #fff5f6;
   border-radius: 150px;
-  -webkit-box-shadow: inset 0px 0px 100px 0px #ffb8ca, 0px 0px 33px 20px #ffb8ca;
-          box-shadow: inset 0px 0px 100px 0px #ffb8ca, 0px 0px 33px 20px #ffb8ca;
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  -webkit-box-shadow: inset 0px 0px 20px 0px #ffb8ca, 0px 0px 33px 20px #ffb8ca;
+          box-shadow: inset 0px 0px 20px 0px #ffb8ca, 0px 0px 33px 20px #ffb8ca;
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
   -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -2557,33 +2558,9 @@ button {
           transform: rotate(90deg) scale(1.2);
 }
 
-@media screen and (min-width: 480px) {
-  .modal {
-    top: 93px;
-    left: 15px;
-    right: 15px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .backdrop.is-hidden .modal {
-    -webkit-transform: translate(-50%, -50%) scale(0.1);
-            transform: translate(-50%, -50%) scale(0.1);
-  }
-  .modal {
-    top: 50%;
-    left: 50%;
-    min-width: 450px;
-    max-width: 527px;
-    -webkit-transform: translate(-50%, -50%) scale(1);
-            transform: translate(-50%, -50%) scale(1);
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .modal {
-    width: 528px;
-  }
+.join-form__name {
+  -webkit-transform: translateY(35px) translateX(120px) scale(1.5);
+          transform: translateY(35px) translateX(120px) scale(1.5);
 }
 
 .join-form {
@@ -2652,6 +2629,17 @@ button {
   font-size: 12px;
   line-height: 1.67;
   letter-spacing: 0.01em;
+  -webkit-transform: translateY(35px) translateX(100px) scale(1.5);
+          transform: translateY(35px) translateX(100px) scale(1.5);
+  -webkit-transition: -webkit-transform 250ms linear;
+  transition: -webkit-transform 250ms linear;
+  transition: transform 250ms linear;
+  transition: transform 250ms linear, -webkit-transform 250ms linear;
+}
+
+.join-form__name--textarea {
+  -webkit-transform: translateY(35px) translateX(75px) scale(1.5);
+          transform: translateY(35px) translateX(75px) scale(1.5);
 }
 
 .join-form__input {
@@ -2661,7 +2649,7 @@ button {
           flex-grow: 1;
   max-height: 40px;
   padding: 11px 12px 11px 42px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
+  border: 1px solid rgba(255, 184, 202, 0.3);
   border-radius: 4px;
 }
 
@@ -2687,7 +2675,13 @@ button {
 
 .join-form__input:focus {
   border: 1px solid #d41443;
-  outline: none;
+  outline: transparent;
+}
+
+.join-form__input:focus ~ .join-form__name,
+.join-form__input:not(:placeholder-shown) ~ .join-form__name {
+  -webkit-transform: translateY(0) translateX(0) scale(1);
+          transform: translateY(0) translateX(0) scale(1);
 }
 
 .join-form__inputtext {
@@ -2720,40 +2714,18 @@ button {
   color: #d41443;
 }
 
-.join-form__inputtext::-webkit-input-placeholder {
-  font-size: 12px;
-  line-height: 1.67;
-  letter-spacing: 0.01em;
-  color: rgba(117, 117, 117, 0.5);
-}
-
-.join-form__inputtext:-ms-input-placeholder {
-  font-size: 12px;
-  line-height: 1.67;
-  letter-spacing: 0.01em;
-  color: rgba(117, 117, 117, 0.5);
-}
-
-.join-form__inputtext::-ms-input-placeholder {
-  font-size: 12px;
-  line-height: 1.67;
-  letter-spacing: 0.01em;
-  color: rgba(117, 117, 117, 0.5);
-}
-
-.join-form__inputtext::placeholder {
-  font-size: 12px;
-  line-height: 1.67;
-  letter-spacing: 0.01em;
-  color: rgba(117, 117, 117, 0.5);
+.join-form__inputtext:focus ~ .join-form__name,
+.join-form__inputtext:not(:placeholder-shown) ~ .join-form__name {
+  -webkit-transform: translateY(0) translateX(0) scale(1);
+          transform: translateY(0) translateX(0) scale(1);
 }
 
 .join-form__icon {
   position: absolute;
   left: 12px;
-  bottom: 11px;
+  top: 35px;
   display: block;
-  fill: #ffb8ca;
+  fill: #ffa5ba;
 }
 
 .join-form__accept {
@@ -2769,7 +2741,7 @@ button {
   width: 16px;
   height: 15px;
   opacity: 1;
-  fill: currentColor;
+  fill: #ffa5ba;
   -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -2834,11 +2806,66 @@ button {
 }
 
 .join-form__submit {
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 160px;
+  height: 44px;
+  display: block;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.31;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  cursor: pointer;
+  outline: 2px solid #d41443;
+  color: #d41443;
+  background-color: #ffffff;
+  border-radius: 22px;
   width: 100px;
   height: 40px;
 }
 
 .join-form__submit:hover, .join-form__submit:focus {
-  background-color: #c7133e;
+  background-color: #d41443;
+  color: #ffffff;
+}
+
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 450px;
+  }
+  .join-form__name {
+    -webkit-transform: translateY(35px) translateX(140px) scale(1.5);
+            transform: translateY(35px) translateX(140px) scale(1.5);
+  }
+  .join-form__name--textarea {
+    -webkit-transform: translateY(35px) translateX(110px) scale(1.5);
+            transform: translateY(35px) translateX(110px) scale(1.5);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .modal {
+    width: 527px;
+  }
+  .join-form__name {
+    -webkit-transform: translateY(35px) translateX(160px) scale(1.5);
+            transform: translateY(35px) translateX(160px) scale(1.5);
+  }
+  .join-form__name--textarea {
+    -webkit-transform: translateY(35px) translateX(130px) scale(1.5);
+            transform: translateY(35px) translateX(130px) scale(1.5);
+  }
 }
 /*# sourceMappingURL=main.css.map */

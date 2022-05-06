@@ -2,6 +2,7 @@
 
 .backdrop {
   position: fixed;
+  overflow: hidden;
   top: 0;
   left: 0;
   z-index: 99;
@@ -46,7 +47,7 @@
   opacity: 0;
   pointer-events: none;
   & .modal {
-    transform: scale(0.1);
+    transform: translate(-50%, -50%) scale(0.1);
   }
 }
 
@@ -56,15 +57,15 @@
 
 .modal {
   position: absolute;
-  top: 3%;
-  left: 3%;
-  right: 3%;
+  width: 320px;
+  top: 50%;
+  left: 50%;
 
   background-color: $bgc-main-color;
   border-radius: 150px;
-  box-shadow: inset 0px 0px 100px 0px $bgc-hero-color, 0px 0px 33px 20px $bgc-hero-color;
+  box-shadow: inset 0px 0px 20px 0px $bgc-hero-color, 0px 0px 33px 20px $bgc-hero-color;
 
-  transform: scale(1);
+  transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms $typical-cubic;
 }
 
@@ -96,34 +97,9 @@
   }
 }
 
-@media screen and (min-width: 480px) {
-  .modal {
-    top: 93px;
-    left: 15px;
-    right: 15px;
-  }
+.join-form__name {
+  transform: translateY(35px) translateX(120px) scale(1.5);
 }
-@media screen and (min-width: 768px) {
-  .backdrop.is-hidden {
-    & .modal {
-      transform: translate(-50%, -50%) scale(0.1);
-    }
-  }
-
-  .modal {
-    top: 50%;
-    left: 50%;
-    min-width: 450px;
-    max-width: 527px;
-    transform: translate(-50%, -50%) scale(1);
-  }
-}
-@media screen and (min-width: 1280px) {
-  .modal {
-    width: 528px;
-  }
-}
-
 // form
 
 .join-form {
@@ -180,6 +156,11 @@
   font-size: 12px;
   line-height: 1.67;
   letter-spacing: 0.01em;
+  transform: translateY(35px) translateX(100px) scale(1.5);
+  transition: transform 250ms linear;
+  &--textarea {
+    transform: translateY(35px) translateX(75px) scale(1.5);
+  }
 }
 
 .join-form__input {
@@ -187,7 +168,7 @@
   flex-grow: 1;
   max-height: 40px;
   padding: 11px 12px 11px 42px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
+  border: 1px solid rgba(255, 184, 202, 0.3);
   border-radius: 4px;
 
   &:focus ~ .join-form__icon {
@@ -212,7 +193,12 @@
 
   &:focus {
     border: 1px solid $accent-red-color;
-    outline: none;
+    outline: transparent;
+  }
+
+  &:focus ~ .join-form__name,
+  &:not(:placeholder-shown) ~ .join-form__name {
+    transform: translateY(0) translateX(0) scale(1);
   }
 }
 
@@ -246,20 +232,18 @@
     color: $accent-red-color;
   }
 
-  &::placeholder {
-    font-size: 12px;
-    line-height: 1.67;
-    letter-spacing: 0.01em;
-    color: rgba(117, 117, 117, 0.5);
+  &:focus ~ .join-form__name,
+  &:not(:placeholder-shown) ~ .join-form__name {
+    transform: translateY(0) translateX(0) scale(1);
   }
 }
 
 .join-form__icon {
   position: absolute;
   left: 12px;
-  bottom: 11px;
+  top: 35px;
   display: block;
-  fill: #ffb8ca;
+  fill: $accent-pink-color;
 }
 
 .join-form__accept {
@@ -278,7 +262,7 @@
 
   opacity: 1;
 
-  fill: currentColor;
+  fill: $accent-pink-color;
 
   transition: opacity 250ms $typical-cubic;
 }
@@ -341,10 +325,56 @@
 }
 
 .join-form__submit {
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 160px;
+  height: 44px;
+  display: block;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.31;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  outline: 2px solid $accent-red-color;
+
+  color: $accent-red-color;
+  background-color: #ffffff;
+  border-radius: 22px;
+
   width: 100px;
   height: 40px;
   &:hover,
   &:focus {
-    background-color: $bgc-red-item-hover;
+    background-color: $accent-red-color;
+    color: $text-white-color;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 450px;
+  }
+  .join-form__name {
+    transform: translateY(35px) translateX(140px) scale(1.5);
+    &--textarea {
+      transform: translateY(35px) translateX(110px) scale(1.5);
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  .modal {
+    width: 527px;
+  }
+  .join-form__name {
+    transform: translateY(35px) translateX(160px) scale(1.5);
+    &--textarea {
+      transform: translateY(35px) translateX(130px) scale(1.5);
+    }
   }
 }
