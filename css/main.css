@@ -1299,10 +1299,11 @@ button {
   position: absolute;
   bottom: calc((100vh - 285px) * -1);
   z-index: 1;
-  background-image: url("../images/milkbgmob1x-left.png");
+  background-image: -webkit-image-set(url("../images/about/milkmx1-left.png") 1x, url("../images/about/milkmx2-left.png") 2x, url("../images/about/milkmx3-left.png") 3x);
+  background-image: image-set("../images/about/milkmx1-left.png" 1x, "../images/about/milkmx2-left.png" 2x, "../images/about/milkmx3-left.png" 3x);
   background-repeat: no-repeat;
   background-size: contain;
-  width: 54px;
+  width: 70px;
   height: 100vh;
 }
 
@@ -1312,10 +1313,11 @@ button {
   bottom: calc((100vh - 285px) * -1);
   z-index: 1;
   right: 0;
-  background-image: url("../images/milkbgmob1x-right.png");
+  background-image: -webkit-image-set(url("../images/about/milkmx1-right.png") 1x, url("../images/about/milkmx2-right.png") 2x, url("../images/about/milkmx3-right.png") 3x);
+  background-image: image-set("../images/about/milkmx1-right.png" 1x, "../images/about/milkmx2-right.png" 2x, "../images/about/milkmx3-right.png" 3x);
   background-repeat: no-repeat;
   background-size: contain;
-  width: 54px;
+  width: 70px;
   height: 100vh;
 }
 
